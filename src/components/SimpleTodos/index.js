@@ -57,22 +57,22 @@ class SimpleTodos extends Component {
     const {todosList} = this.state
 
     return (
-      <div className="app-container">
+      <li className="app-container">
         <div className="simple-todos-container">
           <h1 className="heading">Simple Todos</h1>
           <ul className="todos-list">
             {todosList.map(eachTodo => (
-              <li>
+            
                 <TodoItem
                   key={eachTodo.id}
                   todoDetails={eachTodo}
                   deleteTodo={this.deleteTodo}
                 />
-              </li>
+              
             ))}
           </ul>
         </div>
-      </div>
+      </li>
     )
   }
 }
